@@ -8,7 +8,7 @@ const MongoAdapter = require('@bot-whatsapp/database/mongo')
  * Declaramos las conexiones de Mongo
  */
 
-const MONGO_DB_URI = 'mongodb+srv://admin:admin@basemongo.iv0f8jx.mongodb.net/?retryWrites=true&w=majority'
+const MONGO_DB_URI = 'mongodb+srv://admin:admin@basemongo.DFhaAK6@punS&jbg.mongodb.net/?retryWrites=true&w=majority'
 const MONGO_DB_NAME = 'admin'
 
 /**
@@ -25,9 +25,9 @@ const MONGO_DB_NAME = 'admin'
 
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
-const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
+const flowDocs = addKeyword(['empleada', 'empleado', 'trabajador']).addAnswer(
     [
-        '📄 Aquí encontras las documentación recuerda que puedes mejorarla',
+        '📄 Aquí encontras las documentación sobre los derechos que le corresponden',
         'https://bot-whatsapp.netlify.app/',
         '\n*2* Para siguiente paso.',
     ],
@@ -36,9 +36,9 @@ const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswe
     [flowSecundario]
 )
 
-const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
+const flowTuto = addKeyword(['empleadora', 'jefa','empleador', 'jefe']).addAnswer(
     [
-        '🙌 Aquí encontras un ejemplo rapido',
+        '🙌 Aquí encontras los deberes que le corresponde',
         'https://bot-whatsapp.netlify.app/docs/example/',
         '\n*2* Para siguiente paso.',
     ],
@@ -47,9 +47,9 @@ const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
     [flowSecundario]
 )
 
-const flowGracias = addKeyword(['gracias', 'grac']).addAnswer(
+const flowGracias = addKeyword(['otro']).addAnswer(
     [
-        '🚀 Puedes aportar tu granito de arena a este proyecto',
+        '🚀 Puedes revisar la documentacion correspondiente',
         '[*opencollective*] https://opencollective.com/bot-whatsapp',
         '[*buymeacoffee*] https://www.buymeacoffee.com/leifermendez',
         '[*patreon*] https://www.patreon.com/leifermendez',
@@ -68,13 +68,13 @@ const flowDiscord = addKeyword(['discord']).addAnswer(
 )
 
 const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
-    .addAnswer('🙌 Hola bienvenido a este *Chatbot*')
+    .addAnswer('🙌 Hola bienvenido a este *Chatbot* de SUNAFIL para los trabajadores domesticos')
     .addAnswer(
         [
-            'te comparto los siguientes links de interes sobre el proyecto',
-            '👉 *doc* para ver la documentación',
-            '👉 *gracias*  para ver la lista de videos',
-            '👉 *discord* unirte al discord',
+            'te comparto los siguientes links para identificarte',
+            '👉 *empleada* para los derechos  que te corresponde',
+            '👉 *jefe*  para ver tus deberes y los deberes que tienes',
+            '👉 *otro* informacion general',
         ],
         null,
         null,
